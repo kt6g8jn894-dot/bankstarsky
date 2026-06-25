@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bankstarsky - Luxus & Eleganz</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo-section">
+                <svg class="logo" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                    <!-- Rose mit Gold und Dunkelrot -->
+                    <defs>
+                        <linearGradient id="roseGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" style="stop-color:#8B0000;stop-opacity:1" />
+                            <stop offset="50%" style="stop-color:#C41E3A;stop-opacity:1" />
+                            <stop offset="100%" style="stop-color:#5C0000;stop-opacity:1" />
+                        </linearGradient>
+                        <linearGradient id="goldGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" style="stop-color:#FFD700;stop-opacity:1" />
+                            <stop offset="50%" style="stop-color:#FFA500;stop-opacity:1" />
+                            <stop offset="100%" style="stop-color:#DAA520;stop-opacity:1" />
+                        </linearGradient>
+                    </defs>
+                    
+                    <!-- Stiel (Grün) -->
+                    <path d="M 50 50 Q 48 70 50 90" stroke="#2d5016" stroke-width="2" fill="none"/>
+                    
+                    <!-- Blätter -->
+                    <ellipse cx="40" cy="65" rx="8" ry="12" fill="#2d5016" transform="rotate(-30 40 65)"/>
+                    <ellipse cx="60" cy="70" rx="8" ry="12" fill="#2d5016" transform="rotate(30 60 70)"/>
+                    
+                    <!-- Rosenblüten - äußere Blätter -->
+                    <circle cx="50" cy="35" r="12" fill="url(#roseGradient)"/>
+                    <circle cx="40" cy="38" r="10" fill="url(#roseGradient)"/>
+                    <circle cx="60" cy="38" r="10" fill="url(#roseGradient)"/>
+                    <circle cx="35" cy="45" r="9" fill="#8B0000"/>
+                    <circle cx="65" cy="45" r="9" fill="#8B0000"/>
+                    
+                    <!-- Innere Blüte (dunkler) -->
+                    <circle cx="50" cy="42" r="7" fill="#5C0000"/>
+                    <circle cx="50" cy="40" r="4" fill="#FFD700"/>
+                    
+                    <!-- Gold-Akzente um die Rose -->
+                    <circle cx="50" cy="25" r="2" fill="url(#goldGradient)"/>
+                    <circle cx="30" cy="35" r="2" fill="url(#goldGradient)"/>
+                    <circle cx="70" cy="35" r="2" fill="url(#goldGradient)"/>
+                    <circle cx="25" cy="50" r="2" fill="url(#goldGradient)"/>
+                    <circle cx="75" cy="50" r="2" fill="url(#goldGradient)"/>
+                </svg>
+                <h1>BANKSTARSKY</h1>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#shop">Shop</a></li>
+                <li><a href="#about">Über Uns</a></li>
+                <li><a href="#contact">Kontakt</a></li>
+                <li><a href="#cart" class="cart-icon">🛒 <span class="cart-count">0</span></a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h2>Luxus trifft Eleganz</h2>
+            <p>Entdecke unsere exklusive Kollektion</p>
+            <a href="#shop" class="btn btn-primary">Jetzt Einkaufen</a>
+        </div>
+    </section>
+
+    <!-- Shop Section -->
+    <section id="shop" class="shop">
+        <div class="container">
+            <h2>Unsere Kollektion</h2>
+            <div class="products-grid" id="productsGrid">
+                <!-- Produkte werden hier eingefügt -->
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2>Über Bankstarsky</h2>
+            <p>Wir bieten luxuriöse und elegante Produkte mit höchster Qualität. Jedes Stück ist handverlesen und repräsentiert unsere Leidenschaft für Exzellenz.</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 Bankstarsky. Alle Rechte vorbehalten.</p>
+            <p>Luxus • Eleganz • Qualität</p>
+        </div>
+    </footer>
+
+    <!-- Modal für Warenkorb -->
+    <div id="cartModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Warenkorb</h2>
+            <div id="cartItems"></div>
+            <div class="cart-total">
+                <h3>Gesamt: <span id="totalPrice">0</span>€</h3>
+            </div>
+            <button class="btn btn-primary" onclick="checkout()">Zur Kasse</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
