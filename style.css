@@ -1,0 +1,439 @@
+/* ==================== 
+   Bankstarsky - Stylesheet
+   Luxus Design: Gold, Schwarz, Dunkelrot
+   ==================== */
+
+:root {
+    --gold: #FFD700;
+    --dark-gold: #DAA520;
+    --black: #1a1a1a;
+    --dark-red: #8B0000;
+    --light-red: #C41E3A;
+    --white: #ffffff;
+    --light-gray: #f5f5f5;
+    --border-radius: 8px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Georgia', 'Garamond', serif;
+    background-color: var(--black);
+    color: var(--white);
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* ==================== Navigation ==================== */
+.navbar {
+    background: linear-gradient(135deg, var(--black) 0%, #2a2a2a 100%);
+    border-bottom: 3px solid var(--gold);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 10px rgba(255, 215, 0, 0.2);
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 20px;
+}
+
+.logo-section {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.logo {
+    width: 50px;
+    height: 50px;
+    filter: drop-shadow(0 0 8px rgba(255, 215, 0, 0.4));
+}
+
+.logo-section h1 {
+    font-size: 28px;
+    font-weight: bold;
+    color: var(--gold);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+.nav-menu {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+    align-items: center;
+}
+
+.nav-menu a {
+    color: var(--white);
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+    position: relative;
+}
+
+.nav-menu a:hover {
+    color: var(--gold);
+    text-shadow: 0 0 8px rgba(255, 215, 0, 0.5);
+}
+
+.nav-menu a::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--gold);
+    transition: width 0.3s ease;
+}
+
+.nav-menu a:hover::after {
+    width: 100%;
+}
+
+.cart-icon {
+    position: relative;
+    background: var(--dark-red);
+    padding: 8px 12px;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.cart-count {
+    background: var(--gold);
+    color: var(--black);
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+/* ==================== Hero Section ==================== */
+.hero {
+    background: linear-gradient(135deg, var(--black) 0%, #2a1a1a 50%, var(--dark-red) 100%);
+    padding: 150px 20px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero::before {
+    content: '🌹';
+    position: absolute;
+    font-size: 300px;
+    opacity: 0.1;
+    right: -50px;
+    top: -50px;
+    z-index: 0;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+}
+
+.hero h2 {
+    font-size: 56px;
+    color: var(--gold);
+    margin-bottom: 20px;
+    text-shadow: 0 4px 8px rgba(0, 0, 0, 0.8);
+    letter-spacing: 2px;
+}
+
+.hero p {
+    font-size: 24px;
+    color: var(--light-red);
+    margin-bottom: 30px;
+    font-style: italic;
+}
+
+/* ==================== Buttons ==================== */
+.btn {
+    padding: 14px 35px;
+    border: 2px solid var(--gold);
+    background: transparent;
+    color: var(--gold);
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: var(--border-radius);
+    transition: all 0.3s ease;
+    text-decoration: none;
+    display: inline-block;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: bold;
+}
+
+.btn:hover {
+    background: var(--gold);
+    color: var(--black);
+    box-shadow: 0 0 20px rgba(255, 215, 0, 0.5);
+    transform: translateY(-2px);
+}
+
+.btn-primary {
+    background: var(--dark-red);
+    border-color: var(--dark-red);
+    color: var(--white);
+}
+
+.btn-primary:hover {
+    background: var(--light-red);
+    border-color: var(--light-red);
+    color: var(--white);
+    box-shadow: 0 0 20px rgba(196, 30, 58, 0.6);
+}
+
+/* ==================== Shop Section ==================== */
+.shop {
+    padding: 80px 20px;
+    background: var(--black);
+}
+
+.shop h2 {
+    text-align: center;
+    font-size: 42px;
+    color: var(--gold);
+    margin-bottom: 60px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.product-card {
+    background: linear-gradient(135deg, #2a2a2a 0%, #1a1a1a 100%);
+    border: 2px solid var(--gold);
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(255, 215, 0, 0.1);
+}
+
+.product-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 25px rgba(255, 215, 0, 0.3);
+    border-color: var(--light-red);
+}
+
+.product-image {
+    width: 100%;
+    height: 250px;
+    background: linear-gradient(135deg, var(--gold) 0%, var(--dark-gold) 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 80px;
+    color: var(--dark-red);
+}
+
+.product-info {
+    padding: 20px;
+}
+
+.product-name {
+    font-size: 20px;
+    color: var(--gold);
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.product-description {
+    font-size: 14px;
+    color: #ccc;
+    margin-bottom: 15px;
+}
+
+.product-price {
+    font-size: 24px;
+    color: var(--light-red);
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.product-actions {
+    display: flex;
+    gap: 10px;
+}
+
+.btn-add {
+    flex: 1;
+    padding: 10px;
+    background: var(--dark-red);
+    border: none;
+    color: var(--white);
+    cursor: pointer;
+    border-radius: var(--border-radius);
+    transition: all 0.3s ease;
+    font-weight: bold;
+}
+
+.btn-add:hover {
+    background: var(--light-red);
+    box-shadow: 0 0 10px rgba(196, 30, 58, 0.5);
+}
+
+/* ==================== About Section ==================== */
+.about {
+    padding: 80px 20px;
+    background: linear-gradient(135deg, #2a1a1a 0%, var(--black) 100%);
+    border-top: 3px solid var(--gold);
+    text-align: center;
+}
+
+.about h2 {
+    font-size: 42px;
+    color: var(--gold);
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.about p {
+    font-size: 18px;
+    color: #ddd;
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.8;
+}
+
+/* ==================== Footer ==================== */
+.footer {
+    background: var(--black);
+    border-top: 3px solid var(--gold);
+    padding: 30px 20px;
+    text-align: center;
+    color: var(--gold);
+}
+
+.footer p {
+    margin: 10px 0;
+    font-size: 14px;
+}
+
+/* ==================== Modal (Warenkorb) ==================== */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.modal-content {
+    background: linear-gradient(135deg, #2a2a2a 0%, #1a1a1a 100%);
+    margin: 5% auto;
+    padding: 30px;
+    border: 2px solid var(--gold);
+    width: 90%;
+    max-width: 500px;
+    border-radius: var(--border-radius);
+    box-shadow: 0 8px 30px rgba(255, 215, 0, 0.3);
+}
+
+.close {
+    color: var(--gold);
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.close:hover {
+    color: var(--light-red);
+}
+
+.modal h2 {
+    color: var(--gold);
+    margin-bottom: 20px;
+}
+
+#cartItems {
+    max-height: 300px;
+    overflow-y: auto;
+    margin-bottom: 20px;
+}
+
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    border-bottom: 1px solid var(--gold);
+    color: #ddd;
+}
+
+.cart-total {
+    text-align: right;
+    padding: 20px 0;
+    border-top: 2px solid var(--gold);
+    margin-bottom: 20px;
+}
+
+.cart-total h3 {
+    color: var(--light-red);
+    font-size: 20px;
+}
+
+/* ==================== Responsive ==================== */
+@media (max-width: 768px) {
+    .nav-menu {
+        gap: 15px;
+    }
+
+    .logo-section h1 {
+        font-size: 20px;
+    }
+
+    .hero h2 {
+        font-size: 36px;
+    }
+
+    .hero p {
+        font-size: 18px;
+    }
+
+    .products-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .about h2,
+    .shop h2 {
+        font-size: 28px;
+    }
+}
